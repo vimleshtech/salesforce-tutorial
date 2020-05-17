@@ -1,0 +1,75 @@
+1.CREATED	
+2. CREATED AND UDPATE
+		** OCCURANCE IS NOT 
+		**
+3. CREATED AND UPDATE WITH SUB....
+		**REPEATED REMINDER IS POSSIBLE
+
+====================
+:
+		Associations:
+			1:1		: 1 parent and one child
+					one employee has one salary
+		
+			1:M		: 1 parent and multiple child
+					one employee has multiple date attendance 
+				
+			M:1		: multiple parent and one child
+					: country department , desgination -> 									employee
+ 
+					
+			M:M		: multiple parent and multiple child 
+			multiple employee can works on multiple project
+			and multiple project can be assigned to mulltiple employee 
+					
+
+		Type of associations:
+			1. picklist 
+				mulit select
+
+			2. lookup 
+			   MasterRelation Lookup : 
+				-madatory
+				-rollup summary (from parent we can get child 						aggregiated(max,min,count,sum) information)
+				-parent to child navigation 
+				-parent level security can be applicable on child
+				-all child rows will remove when parent will remove
+
+					
+ 			Lookup  : 
+				-this can be optional 
+				-there will seperate security on parent and child
+				-rollup is not allowed 
+				-child row will not be removed if parent will remove
+
+
+			
+
+		->Rollup  : create rollup 
+			step 1. create parent object which will become master
+					example(classroom object)
+			step 2. create child object 
+					example(student)
+
+			step 3. add parent reference(classroom object) as master 				lookup relation in child object
+
+			step 4. add rollup summary field in parent(classroll) object
+				-select your function/formula 
+
+				
+
+			
+		
+->Mass delete
+->security :
+		app level
+		object level / tab level
+		field level
+		record level 
+
+->Sharing
+		**there is obejct that is not added in particular profile
+		however we need to assign access to pariticur group or user
+
+
+		
